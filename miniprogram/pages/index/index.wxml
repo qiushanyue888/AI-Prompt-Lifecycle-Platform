@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="title">AI提示词工具箱</view>
+  
+  <!-- 新增提示词的表单 -->
+  <view class="form">
+    <input class="input" placeholder="提示词标题" bindinput="inputTitle" value="{{title}}" />
+    <textarea class="textarea" placeholder="提示词内容" bindinput="inputContent" value="{{content}}" />
+    <button type="primary" bindtap="addTemplate">新增提示词</button>
+  </view>
+  
+  <view class="divider">提示词列表</view>
+  
+  <!-- 加载按钮 -->
+  <button bindtap="loadData">刷新列表</button>
+  
+  <!-- 提示词列表 -->
+  <view class="list" wx:for="{{templates}}" wx:key="id">
+    <view class="item">
+      <view class="item-title">{{item.title}}</view>
+      <view class="item-content">{{item.content}}</view>
+      <view class="item-category">{{item.category}}</view>
+      <button class="del-btn" data-id="{{item.id}}" catchtap="deleteTemplate">删除</button>
+    </view>
+  </view>
+</view>

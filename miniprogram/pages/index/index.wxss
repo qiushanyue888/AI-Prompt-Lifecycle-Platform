@@ -1,0 +1,82 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.input, .textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* 新增最小高度，保证不会过小遮挡文字 */
+  min-height: 44px;
+}
+
+.textarea {
+  height: 80px;
+  min-height: 80px;
+}
+
+.divider {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.item-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item-content {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.item-category {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+.del-btn {
+  width: auto;
+  margin-top: 8px;
+  padding: 4px 12px;
+  font-size: 13px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  /* 新增这两行 */
+  outline: none;
+  line-height: 1.2;
+}

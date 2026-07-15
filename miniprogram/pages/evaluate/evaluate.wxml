@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="title">AI 智能评测</view>
+  
+  <view class="form">
+    <view class="form-label">题目</view>
+    <textarea class="form-textarea" placeholder="请输入题目，例如：1+1等于几？" bindinput="inputQuestion" value="{{question}}" />
+    
+    <view class="form-label">标准答案</view>
+    <textarea class="form-textarea" placeholder="请输入标准答案，例如：2" bindinput="inputStandard" value="{{standardAnswer}}" />
+    
+    <view class="form-label">考生回答</view>
+    <textarea class="form-textarea" placeholder="请输入考生回答，例如：等于2" bindinput="inputUser" value="{{userAnswer}}" />
+    
+    <button type="primary" bindtap="evaluate">开始评测</button>
+  </view>
+  
+  <view class="result" wx:if="{{score !== ''}}">
+    <view class="result-title">评测结果</view>
+    <view class="result-score">{{score}} 分</view>
+    <view class="result-desc">
+      <text wx:if="{{score >= 9}}">🌟 非常优秀！回答完全正确。</text>
+      <text wx:elif="{{score >= 6}}">👍 不错，大体正确。</text>
+      <text wx:elif="{{score >= 3}}">🤔 还需努力，部分正确。</text>
+      <text wx:else>📚 需要加强学习，回答有误。</text>
+    </view>
+  </view>
+</view>
